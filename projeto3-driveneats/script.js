@@ -1,22 +1,24 @@
 function mostrarCheck() {
-    const mostrar = document.querySelector('.categoria .escondido');
+    const mostrar = document.querySelector('.checkicon .escondido');
     mostrar.classList.remove('escondido');
+    console.log(mostrar);
 }
 function esconderCheck() {
-    const esconder = document.querySelector('.categoria .escondido');
+    const esconder = document.querySelector('.checkicon .escondido');
     esconder.classList.add('escondido');
+    console.log(esconder);
 }
 
 function selecionarPedido(pedidoSelecionado) {
     const botaoSelecionadoAnteriormentePrato = document.querySelector('.prato .selecionado');
    
     if (botaoSelecionadoAnteriormentePrato !== null) {
-        botaoSelecionadoAnteriormentePrato.classList.remove('selecionado');
         esconderCheck();
+        botaoSelecionadoAnteriormentePrato.classList.remove('selecionado');
 
     } else {
-        pedidoSelecionado.classList.add('selecionado');
         mostrarCheck();
+        pedidoSelecionado.classList.add('selecionado');
     }
 }
 
