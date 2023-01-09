@@ -16,12 +16,15 @@ function esconderCheck() {
 
 function selecionarPedido(pedidoSelecionado) {
     const botaoSelecionadoAnteriormentePrato = document.querySelector('.prato .selecionado');
-    
+    const checkSelecionadoAnteriomentePrato = pedidoSelecionado.querySelector('.escondido');
+    console.log(checkSelecionadoAnteriomentePrato);
     if (botaoSelecionadoAnteriormentePrato !== null) {
         botaoSelecionadoAnteriormentePrato.classList.remove('selecionado');
+        checkSelecionadoAnteriomentePrato.classList.add('escondido');
         qtdselecionados--;
     }
     pedidoSelecionado.classList.add('selecionado');
+    pedidoSelecionado.classList.remove('escondido');
     pratoSelecionado = pedidoSelecionado.querySelector('figcaption').innerHTML;
     precoPrato = pedidoSelecionado.querySelector('.descricao .preco').innerHTML;
     precoPrato = precoPrato.replace('R$', ('')).replace(',', '.');
@@ -82,10 +85,19 @@ function fecharPedido(fechado) {
     texto.innerHTML = "Fechar pedido";
     precoTotal = parseFloat(precoBebida) + parseFloat(precoDoce) + parseFloat(precoPrato);
     precoTotal = precoTotal.toFixed(2);
+    precoTotal = precoTotal.replace('.', ',');
     console.log(precoTotal);
+    enviarPedido();
 }
 
 function enviarPedido() {
-    
-    
+    const mensagem = `Olá, gostaria de fazer o pedido:\n
+   - Prato: ${pratoSelecionado}\n
+   -Bebida: ${bebidaSelecionada}\n
+   -Sobremesa: ${doceSelecionado}\n
+   Total: R$ ${precoTotal}`;
+
+    const link = "https://wa.me/5561998444849?text=" + encodeURIComponent(mensagem);
+    console.log(mensagem);
+    window.open(link);
 }
