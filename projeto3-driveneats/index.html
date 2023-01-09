@@ -23,7 +23,7 @@
                 <div>
                     <h2>Primeiro, seu prato</h2>
                     <div class="container-pedidos">
-                        <button class="camarao" onclick="selecionarPedido(this)">
+                        <button class="camarao" onclick="selecionarPedido(this)" onclick="enviarPedido()">
                             <div class="caixa-pedido">
                                 <figure>
                                     <img src="./imagens/michele-blackwell-rAyCBQTH7ws-unsplash.jpg" alt="Lámen de camarão">
@@ -32,7 +32,7 @@
                                 <div class="descricao">
                                     <p>Um pouco de vagem</p>
                                     <p>Um pouco de ovo</p>
-                                    <p>R$ 24,90</p>
+                                    <p class="preco">R$ 24,90</p>
                                 </div>
                                 <div class="checkicon">
                                     <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
@@ -48,9 +48,9 @@
                                 <div class="descricao">
                                     <p>Um pouco de brócolis</p>
                                     <p>Um pouco de pimenta</p>
-                                    <p>R$ 22,90</p>
+                                    <p class="preco">R$ 22,90</p>
                                 </div>
-                                <div class="checkicon">
+                                <div class="checkicon" >
                                     <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
                                 </div>
                             </div>
@@ -64,7 +64,7 @@
                                 <div class="descricao">
                                     <p>Um pouco de brócolis</p>
                                     <p>Um pouco de tofu</p>
-                                    <p>R$ 25,90</p>
+                                    <p class="preco">R$ 25,90</p>
                                 </div>
                                 <div class="checkicon">
                                     <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
@@ -80,7 +80,7 @@
                                 <div class="descricao">
                                     <p>Um pouco de gengibre</p>
                                     <p>Um pouco de cebolinha</p>
-                                    <p>R$ 20,90</p>
+                                    <p class="preco">R$ 20,90</p>
                                 </div>
                                 <div class="checkicon">
                                     <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
@@ -102,7 +102,7 @@
                                 </figure>
                                 <div class="descricao">
                                     <p>Lata 350ml</p>
-                                    <p>R$ 5,90</p>
+                                    <p class="preco">R$ 5,90</p>
                                 </div>
                                 <div class="checkicon escondido">
                                     <ion-icon name="checkmark-circle"></ion-icon>
@@ -117,7 +117,7 @@
                                 </figure>
                                 <div class="descricao">
                                     <p>Lata 350ml</p>
-                                    <p>R$ 5,90</p>
+                                    <p class="preco">R$ 5,90</p>
                                 </div>
                                 <div class="checkicon escondido">
                                     <ion-icon name="checkmark-circle"></ion-icon>
@@ -132,7 +132,7 @@
                                 </figure>
                                 <div class="descricao">
                                     <p>Lata 350ml</p>
-                                    <p>R$ 5,90</p>
+                                    <p class="preco">R$ 5,90</p>
                                 </div>
                                 <div class="checkicon escondido">
                                     <ion-icon name="checkmark-circle"></ion-icon>
@@ -147,7 +147,7 @@
                                 </figure>
                                 <div class="descricao">
                                     <p>Lata 473ml</p>
-                                    <p>R$ 8,90</p>
+                                    <p class="preco">R$ 8,90</p>
                                 </div>    
                                 <div class="checkicon escondido">
                                     <ion-icon name="checkmark-circle"></ion-icon>
@@ -170,7 +170,7 @@
                                 <div class="descricao">
                                     <p>Doce de Leite</p>
                                     <p>Canela</p>
-                                    <p>R$ 9,90</p>
+                                    <p class="preco">R$ 9,90</p>
                                 </div>
                                 <div class="checkicon escondido">
                                     <ion-icon name="checkmark-circle"></ion-icon>
@@ -186,7 +186,7 @@
                                 <div class="descricao">
                                     <p>Nozes</p>
                                     <p>Caramelo</p>
-                                    <p>R$ 9,90</p>
+                                    <p class="preco">R$ 9,90</p>
                                 </div>
                                 <div class="checkicon escondido">
                                     <ion-icon name="checkmark-circle"></ion-icon>
@@ -202,7 +202,7 @@
                                 <div class="descricao">
                                     <p>Um pouco de café</p>
                                     <p>Chocolatudo</p>
-                                    <p>R$ 9,90</p>
+                                    <p class="preco">R$ 9,90</p>
                                 </div>  
                                 <div class="checkicon escondido">
                                     <ion-icon name="checkmark-circle"></ion-icon>
@@ -218,7 +218,7 @@
                                 <div class="descricao">
                                     <p>Bem recheado</p>
                                     <p>Com biscoito</p>
-                                    <p>R$ 9,90</p>
+                                    <p class="preco">R$ 9,90</p>
                                 </div>
                                 <div class="checkicon escondido">
                                     <ion-icon name="checkmark-circle"></ion-icon>
@@ -230,7 +230,7 @@
             </section>
         </main>
         <footer class="barra-bottom">
-            <button disabled class="selecionar-pedido">
+            <button disabled class="selecionar-pedidos" onclick="fecharPedido(this)">
                 <h3>Selecione os 3 itens para fechar o pedido</h3>
             </button>
         </footer>

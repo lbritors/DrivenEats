@@ -1,25 +1,33 @@
+let check;
+let pratoSelecionado="", bebidaSelecionada="", doceSelecionado = "", qtdselecionados = 0, preco,
+    precoPrato, precoBebida, precoDoce;
 function mostrarCheck() {
-    const mostrar = document.querySelector('.checkicon .escondido');
-    mostrar.classList.remove('escondido');
-    console.log(mostrar);
+    check = document.querySelector('.checkicon .escondido');
+    if (check !== null) {
+        check.classList.remove('escondido');
+        console.log(check);
+    }
 }
 function esconderCheck() {
-    const esconder = document.querySelector('.checkicon .escondido');
-    esconder.classList.add('escondido');
-    console.log(esconder);
+    check = document.querySelector('.checkicon .escondido');
+        check.classList.add('escondido');
+        console.log(check);
 }
 
 function selecionarPedido(pedidoSelecionado) {
     const botaoSelecionadoAnteriormentePrato = document.querySelector('.prato .selecionado');
-   
+    
     if (botaoSelecionadoAnteriormentePrato !== null) {
-        esconderCheck();
         botaoSelecionadoAnteriormentePrato.classList.remove('selecionado');
-
-    } else {
-        mostrarCheck();
-        pedidoSelecionado.classList.add('selecionado');
+        qtdselecionados--;
     }
+    pedidoSelecionado.classList.add('selecionado');
+    pratoSelecionado = pedidoSelecionado.querySelector('figcaption').innerHTML;
+    precoPrato = pedidoSelecionado.querySelector('.descricao .preco');
+    console.log(pratoSelecionado);
+    console.log(precoPrato);
+    qtdselecionados++;
+    verificarPedidoFechado();
 }
 
 
@@ -28,9 +36,15 @@ function selecionarPedido2(pedidoSelecionado2) {
 
     if (botaoSelecionadoAnteriormenteBebida !== null) {
         botaoSelecionadoAnteriormenteBebida.classList.remove('selecionado');
-    } else {
-        pedidoSelecionado2.classList.add('selecionado');
-    }
+        qtdselecionados--;
+    } 
+    pedidoSelecionado2.classList.add('selecionado'); 
+    bebidaSelecionada = pedidoSelecionado2.querySelector('figcaption').innerHTML;
+    precoBebida = pedidoSelecionado2.querySelector('.descricao .preco');
+    console.log(bebidaSelecionada);
+    console.log(precoBebida);
+    qtdselecionados++;
+    verificarPedidoFechado();
     
 }
 
@@ -39,8 +53,33 @@ function selecionarPedido3(pedidoSelecionado3) {
 
     if (botaoSelecionadoAnteriormenteDoce!== null) {
         botaoSelecionadoAnteriormenteDoce.classList.remove('selecionado');
-    } else {
-        pedidoSelecionado3.classList.add('selecionado');
+        qtdselecionados--;
+    } 
+    pedidoSelecionado3.classList.add('selecionado');
+    doceSelecionado = pedidoSelecionado3.querySelector('figcaption').innerHTML;
+    precoDoce = pedidoSelecionado3.querySelector('.descricao .preco');
+    console.log(doceSelecionado);
+    console.log(precoDoce);
+    qtdselecionados++;
+    verificarPedidoFechado();
+    
+}
+
+function verificarPedidoFechado() {
+    const habilitar = document.querySelector('.selecionar-pedidos');
+    if (qtdselecionados === 3) {
+        habilitar.removeAttribute('disabled');
     }
+}
+
+function fecharPedido(fechado) {
+    const texto = document.querySelector('.selecionar-pedidos h3');
+    console.log(fechado);
+    fechado.classList.add('pronto');
+    texto.innerHTML = "Fechar pedido";
+    nomePrato = document.query
+}
+
+function enviarPedido() {
     
 }

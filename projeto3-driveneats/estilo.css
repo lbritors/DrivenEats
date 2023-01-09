@@ -185,7 +185,7 @@ footer {
     z-index: 1;
 }
 
-.selecionar-pedido{
+.selecionar-pedidos{
     width: 364px;
     height: 61px;
     background-color: #CBCBCB;
@@ -194,13 +194,19 @@ footer {
     align-items: center;
     border-radius: 50px;
 }
-.selecionar-pedido h3{
+.selecionar-pedidos h3{
     color:white;
     font-weight: 400;
     font-size: 20px;
     line-height: 23px;
     text-align: center;
 }
+
+.pronto {
+    background-color: #32B72F;
+}
+
+
 
  
 
