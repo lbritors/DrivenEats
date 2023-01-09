@@ -1,5 +1,5 @@
 let check;
-let pratoSelecionado="", bebidaSelecionada="", doceSelecionado = "", qtdselecionados = 0, preco,
+let pratoSelecionado="", bebidaSelecionada="", doceSelecionado = "", qtdselecionados = 0, precoTotal = 0,
     precoPrato, precoBebida, precoDoce;
 function mostrarCheck() {
     check = document.querySelector('.checkicon .escondido');
@@ -23,7 +23,8 @@ function selecionarPedido(pedidoSelecionado) {
     }
     pedidoSelecionado.classList.add('selecionado');
     pratoSelecionado = pedidoSelecionado.querySelector('figcaption').innerHTML;
-    precoPrato = pedidoSelecionado.querySelector('.descricao .preco');
+    precoPrato = pedidoSelecionado.querySelector('.descricao .preco').innerHTML;
+    precoPrato = precoPrato.replace('R$', ('')).replace(',', '.');
     console.log(pratoSelecionado);
     console.log(precoPrato);
     qtdselecionados++;
@@ -40,7 +41,8 @@ function selecionarPedido2(pedidoSelecionado2) {
     } 
     pedidoSelecionado2.classList.add('selecionado'); 
     bebidaSelecionada = pedidoSelecionado2.querySelector('figcaption').innerHTML;
-    precoBebida = pedidoSelecionado2.querySelector('.descricao .preco');
+    precoBebida = pedidoSelecionado2.querySelector('.descricao .preco').innerHTML;
+    precoBebida = precoBebida.replace('R$', ('')).replace(',', '.');
     console.log(bebidaSelecionada);
     console.log(precoBebida);
     qtdselecionados++;
@@ -57,7 +59,8 @@ function selecionarPedido3(pedidoSelecionado3) {
     } 
     pedidoSelecionado3.classList.add('selecionado');
     doceSelecionado = pedidoSelecionado3.querySelector('figcaption').innerHTML;
-    precoDoce = pedidoSelecionado3.querySelector('.descricao .preco');
+    precoDoce = pedidoSelecionado3.querySelector('.descricao .preco').innerHTML;
+    precoDoce = precoDoce.replace('R$', ('')).replace(',', '.');
     console.log(doceSelecionado);
     console.log(precoDoce);
     qtdselecionados++;
@@ -77,9 +80,12 @@ function fecharPedido(fechado) {
     console.log(fechado);
     fechado.classList.add('pronto');
     texto.innerHTML = "Fechar pedido";
-    nomePrato = document.query
+    precoTotal = parseFloat(precoBebida) + parseFloat(precoDoce) + parseFloat(precoPrato);
+    precoTotal = precoTotal.toFixed(2);
+    console.log(precoTotal);
 }
 
 function enviarPedido() {
+    
     
 }
