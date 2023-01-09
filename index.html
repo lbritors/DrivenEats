@@ -19,173 +19,209 @@
             <p>Sua comida em 6 minutos</p>
         </header>
         <main class="conteudo-pagina">
-            <section class="categoria" >
+            <section class="categoria prato" >
                 <div>
                     <h2>Primeiro, seu prato</h2>
                     <div class="container-pedidos">
-                        <button>
+                        <button date-test="dish" class="camarao" onclick="selecionarPedido(this)" onclick="enviarPedido()">
                             <div class="caixa-pedido">
                                 <figure>
                                     <img src="./imagens/michele-blackwell-rAyCBQTH7ws-unsplash.jpg" alt="Lámen de camarão">
-                                    <figcaption>Lámen de Camarão</figcaption>
+                                    <figcaption data-test="item-name">Lámen de Camarão</figcaption data-test="item-name">
                                 </figure>
                                 <div class="descricao">
                                     <p>Um pouco de vagem</p>
                                     <p>Um pouco de ovo</p>
-                                    <p>R$ 24,90</p>
+                                    <p class="preco" data-test="item-price">R$ 24,00</p>
+                                </div>
+                                <div class="checkicon">
+                                    <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
                                 </div>
                             </div>
                         </button>
-                        <button>
+                        <button data-test="dish" class="carne" onclick="selecionarPedido(this)">
                             <div class="caixa-pedido">
                                 <figure>
                                     <img src="./imagens/eriks-irmejs-Prtmg56zIX0-unsplash.jpg" alt="Lámen de carne">
-                                    <figcaption>Lámen de Carne</figcaption>
+                                    <figcaption data-test="item-name">Lámen de Carne</figcaption data-test="item-name">
                                 </figure>
                                 <div class="descricao">
                                     <p>Um pouco de brócolis</p>
                                     <p>Um pouco de pimenta</p>
-                                    <p>R$ 22,90</p>
+                                    <p class="preco" data-test="item-price">R$ 22,00</p>
+                                </div>
+                                <div class="checkicon" >
+                                    <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
                                 </div>
                             </div>
                         </button>
-                        <button>
+                        <button data-test="dish" class="veggie" onclick="selecionarPedido(this)">
                             <div class="caixa-pedido">
                                 <figure>
                                     <img src="./imagens/no-revisions-YRSRQpBfsj4-unsplash.jpg" alt="Lámen Veggie">
-                                    <figcaption>Lámen Veggie</figcaption>
+                                    <figcaption data-test="item-name">Lámen Veggie</figcaption data-test="item-name">
                                 </figure>
                                 <div class="descricao">
                                     <p>Um pouco de brócolis</p>
                                     <p>Um pouco de tofu</p>
-                                    <p>R$ 25,90</p>
+                                    <p class="preco" data-test="item-price">R$ 25,00</p>
+                                </div>
+                                <div class="checkicon">
+                                    <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
                                 </div>
                             </div>
                         </button>
-                        <button>
+                        <button data-test="dish" class="porco" onclick="selecionarPedido(this)">
                             <div class="caixa-pedido">
                                 <figure>
                                     <img src="./imagens/hari-panicker-2t28IxSTqF4-unsplash.jpg" alt="Lámen de Porco">
-                                    <figcaption>Lámen de Porco</figcaption>
+                                    <figcaption data-test="item-name">Lámen de Porco</figcaption data-test="item-name">
                                 </figure>
                                 <div class="descricao">
                                     <p>Um pouco de gengibre</p>
                                     <p>Um pouco de cebolinha</p>
-                                    <p>R$ 20,90</p>
+                                    <p class="preco" data-test="item-price">R$ 21,00</p>
+                                </div>
+                                <div class="checkicon">
+                                    <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
                                 </div>
                             </div>
                         </button>
                     </div>    
                 </div>
             </section>
-            <section class="categoria" >
+            <section class="categoria bebida" >
                 <div>
                     <h2>Agora, sua bebida</h2>
                     <div class="container-pedidos">
-                        <button>
+                        <button data-test="drink" class="pepsi" onclick="selecionarPedido2(this)">
                             <div class="caixa-pedido">
                                 <figure>
                                     <img src="./imagens/erik-mclean-8PlxjAptzmE-unsplash.jpg" alt="Pepsi">
-                                    <figcaption>Pepsi</figcaption>
+                                    <figcaption data-test="item-name">Pepsi</figcaption data-test="item-name">
                                 </figure>
                                 <div class="descricao">
                                     <p>Lata 350ml</p>
-                                    <p>R$ 5,90</p>
+                                    <p class="preco" data-test="item-price">R$ 5,00</p>
+                                </div>
+                                <div class="checkicon escondido">
+                                    <ion-icon name="checkmark-circle"></ion-icon>
                                 </div>
                             </div>
                         </button>
-                        <button>
+                        <button data-test="drink" class="coca" onclick="selecionarPedido2(this)">
                             <div class="caixa-pedido">
                                 <figure>
                                     <img src="./imagens/james-yarema-wQFmDhrvVSs-unsplash.jpg" alt="Coca-Cola">
-                                    <figcaption>Coca-Cola</figcaption>
+                                    <figcaption data-test="item-name">Coca-Cola</figcaption data-test="item-name">
                                 </figure>
                                 <div class="descricao">
                                     <p>Lata 350ml</p>
-                                    <p>R$ 5,90</p>
+                                    <p class="preco" data-test="item-price">R$ 5,00</p>
+                                </div>
+                                <div class="checkicon escondido">
+                                    <ion-icon name="checkmark-circle"></ion-icon>
                                 </div>
                             </div>
                         </button>
-                        <button>
+                        <button data-test="drink" class="chups" onclick="selecionarPedido2(this)">
                             <div class="caixa-pedido">
                                 <figure>
                                     <img src="./imagens/justus-menke-YIx0N2ZUaGg-unsplash.jpg" alt="Chupa-Chups">
-                                    <figcaption>Chupa-Chups</figcaption>
+                                    <figcaption data-test="item-name">Chupa-Chups</figcaption data-test="item-name">
                                 </figure>
                                 <div class="descricao">
                                     <p>Lata 350ml</p>
-                                    <p>R$ 5,90</p>
+                                    <p class="preco" data-test="item-price">R$ 5,00</p>
+                                </div>
+                                <div class="checkicon escondido">
+                                    <ion-icon name="checkmark-circle"></ion-icon>
                                 </div>
                             </div>
                         </button>
-                        <button>
+                        <button data-test="drink" class="monster" onclick="selecionarPedido2(this)">
                             <div class="caixa-pedido">
                                 <figure>
                                     <img src="./imagens/christian-wiediger-Wh41wPvHnw8-unsplash.jpg" alt="Monster">
-                                    <figcaption>Monster</figcaption>
+                                    <figcaption data-test="item-name">Monster</figcaption data-test="item-name">
                                 </figure>
                                 <div class="descricao">
                                     <p>Lata 473ml</p>
-                                    <p>R$ 8,90</p>
+                                    <p class="preco" data-test="item-price">R$ 8,00</p>
                                 </div>    
+                                <div class="checkicon escondido">
+                                    <ion-icon name="checkmark-circle"></ion-icon>
+                                </div>
                             </div>
                         </button>
                     </div>    
                 </div>
             </section>
-            <section class="categoria" >
+            <section class="categoria doce" >
                 <div>
                     <h2>Por fim, sua sobremesa</h2>
                     <div class="container-pedidos">
-                        <button>
+                        <button data-test="dessert" class="churro" onclick="selecionarPedido3(this)">
                             <div class="caixa-pedido">
                                 <figure>
                                     <img src="./imagens/emilly-carvalho-P0aOSlp5i_g-unsplash.jpg" alt="Cupcake de Doce de Leite">
-                                    <figcaption>Cupcake de Churro</figcaption>
+                                    <figcaption data-test="item-name">Cupcake de Churro</figcaption data-test="item-name">
                                 </figure>
                                 <div class="descricao">
                                     <p>Doce de Leite</p>
                                     <p>Canela</p>
-                                    <p>R$ 9,90</p>
+                                    <p class="preco" data-test="item-price">R$ 10,00</p>
+                                </div>
+                                <div class="checkicon escondido">
+                                    <ion-icon name="checkmark-circle"></ion-icon>
                                 </div>
                             </div>
                         </button>
-                        <button>
+                        <button data-test="dessert" class="nozes" onclick="selecionarPedido3(this)">
                             <div class="caixa-pedido">
                                 <figure>
                                     <img src="./imagens/atheer-alghamdi-YhJjDe-vEyw-unsplash.jpg" alt="Cupcake de Nozes">
-                                    <figcaption>Cupcake de Nozes</figcaption>
+                                    <figcaption data-test="item-name">Cupcake de Nozes</figcaption data-test="item-name">
                                 </figure>
                                 <div class="descricao">
                                     <p>Nozes</p>
                                     <p>Caramelo</p>
-                                    <p>R$ 9,90</p>
+                                    <p class="preco" data-test="item-price">R$ 10,00</p>
+                                </div>
+                                <div class="checkicon escondido">
+                                    <ion-icon name="checkmark-circle"></ion-icon>
                                 </div>
                             </div>
                         </button>
-                        <button>
+                        <button data-test="dessert" class="cafe" onclick="selecionarPedido3(this)">
                             <div class="caixa-pedido">
                                 <figure>
                                     <img src="./imagens/jacob-boavista-0xGLSpZlOeI-unsplash.jpg" alt="Cupcake de Café com Chocolate">
-                                    <figcaption>Cupcake de Café </figcaption>
+                                    <figcaption data-test="item-name">Cupcake de Café </figcaption data-test="item-name">
                                 </figure>
                                 <div class="descricao">
                                     <p>Um pouco de café</p>
                                     <p>Chocolatudo</p>
-                                    <p>R$ 9,90</p>
-                                </div>    
+                                    <p class="preco" data-test="item-price">R$ 10,00</p>
+                                </div>  
+                                <div class="checkicon escondido">
+                                    <ion-icon name="checkmark-circle"></ion-icon>
+                                </div>  
                             </div>
                         </button>
-                        <button>
+                        <button data-test="dessert" class="oreo" onclick="selecionarPedido3(this)">
                             <div class="caixa-pedido">
                                 <figure>
                                     <img src="./imagens/lana-mattice-gKrxflp1wv0-unsplash.jpg" alt="Cupcake de Oreo">
-                                    <figcaption>Cupcake de Oreo</figcaption>
+                                    <figcaption data-test="item-name">Cupcake de Oreo</figcaption data-test="item-name">
                                 </figure>
                                 <div class="descricao">
-                                    <p>Oreo</p>
-                                    <p>Com pedaços de biscoito</p>
-                                    <p>R$ 9,90</p>
+                                    <p>Bem recheado</p>
+                                    <p>Com biscoito</p>
+                                    <p class="preco" data-test="item-price">R$ 10,00</p>
+                                </div>
+                                <div class="checkicon escondido">
+                                    <ion-icon name="checkmark-circle"></ion-icon>
                                 </div>    
                             </div>
                         </button>
@@ -194,11 +230,12 @@
             </section>
         </main>
         <footer class="barra-bottom">
-            <div class="selecionar-pedido">
-                <h3>Selecione os 3 itens
-                    para fechar o pedido</h3>
-            </div>
+            <button data-test="order-btn" disabled class="selecionar-pedidos" onclick="fecharPedido(this)">
+                <h3>Selecione os 3 itens para fechar o pedido</h3>
+            </button>
         </footer>
-    </div>  
+    </div>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>  
 </body>
 </html>
